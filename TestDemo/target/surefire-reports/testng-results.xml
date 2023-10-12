@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2023-10-05T17:57:18 IST" name="testingSuite" finished-at="2023-10-05T17:57:22 IST" duration-ms="3957">
+    <groups>
+      <group name="selenium">
+        <method signature="WebDriverTest.seleniumTest()[pri:0, instance:com.testdemo.WebDriverTest@223aa2f7]" name="seleniumTest" class="com.testdemo.WebDriverTest"/>
+      </group> <!-- selenium -->
+      <group name="addition">
+        <method signature="AppTest.addNegativeTest()[pri:0, instance:com.testdemo.AppTest@2dde1bff]" name="addNegativeTest" class="com.testdemo.AppTest"/>
+        <method signature="AppTest.addPositiveTest()[pri:0, instance:com.testdemo.AppTest@2dde1bff]" name="addPositiveTest" class="com.testdemo.AppTest"/>
+      </group> <!-- addition -->
+    </groups>
+    <test started-at="2023-10-05T17:57:18 IST" name="Test1" finished-at="2023-10-05T17:57:22 IST" duration-ms="3957">
+      <class name="com.testdemo.WebDriverTest">
+        <test-method is-config="true" signature="initAll()[pri:0, instance:com.testdemo.WebDriverTest@223aa2f7]" started-at="2023-10-05T17:57:18 IST" name="initAll" finished-at="2023-10-05T17:57:20 IST" duration-ms="2068" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initAll -->
+        <test-method signature="seleniumTest()[pri:0, instance:com.testdemo.WebDriverTest@223aa2f7]" started-at="2023-10-05T17:57:20 IST" name="seleniumTest" finished-at="2023-10-05T17:57:21 IST" duration-ms="1667" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- seleniumTest -->
+        <test-method is-config="true" signature="destroy()[pri:0, instance:com.testdemo.WebDriverTest@223aa2f7]" started-at="2023-10-05T17:57:21 IST" name="destroy" finished-at="2023-10-05T17:57:22 IST" duration-ms="124" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- destroy -->
+      </class> <!-- com.testdemo.WebDriverTest -->
+      <class name="com.testdemo.AppTest">
+        <test-method is-config="true" signature="initAll()[pri:0, instance:com.testdemo.AppTest@2dde1bff]" started-at="2023-10-05T17:57:18 IST" name="initAll" finished-at="2023-10-05T17:57:18 IST" duration-ms="26" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initAll -->
+        <test-method signature="addNegativeTest()[pri:0, instance:com.testdemo.AppTest@2dde1bff]" started-at="2023-10-05T17:57:18 IST" name="addNegativeTest" finished-at="2023-10-05T17:57:18 IST" duration-ms="4" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addNegativeTest -->
+        <test-method signature="addPositiveTest()[pri:0, instance:com.testdemo.AppTest@2dde1bff]" started-at="2023-10-05T17:57:18 IST" name="addPositiveTest" finished-at="2023-10-05T17:57:18 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addPositiveTest -->
+      </class> <!-- com.testdemo.AppTest -->
+    </test> <!-- Test1 -->
+  </suite> <!-- testingSuite -->
+</testng-results>
