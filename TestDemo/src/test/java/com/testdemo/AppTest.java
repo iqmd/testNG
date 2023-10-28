@@ -11,11 +11,21 @@ public class AppTest
     @BeforeClass(alwaysRun = true)
     public void initAll(){
       calc  = new Calculator();
+
     }
 
-    @Test(groups = "addition")
-    public void addPositiveTest(){
-        assertEquals(11,calc.add(5,6));
+    @DataProvider(name="test1")
+    public Object[][] inputs(){
+        return new Object[][]{
+            {11,5,6},
+            {8,3,4}
+        };
+    }
+
+
+    @Test(groups = "addition", dataProvider = "test1")
+    public void addPositiveTest(int[] vals){
+        assertEquals(vals[0],calc.add(vals[1],vals[2]));
     }
 
     @Test(groups = "addition")

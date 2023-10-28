@@ -25,7 +25,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -39,7 +39,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-testingSuite" class="navigator-link">
-              <span class="suite-name border-passed">testingSuite</span>
+              <span class="suite-name border-failed">testingSuite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -92,7 +92,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">3 methods,   3 passed</span>
+                    <span class="method-stats">4 methods, 1 failed,   3 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-testingSuite" class="hide-methods failed suite-testingSuite"> (hide)</a> <!-- hide-methods failed suite-testingSuite -->
+                      <a href="#" panel-name="suite-testingSuite" class="show-methods failed suite-testingSuite"> (show)</a> <!-- show-methods failed suite-testingSuite -->
+                    </span>
+                    <div class="method-list-content failed suite-testingSuite">
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-testingSuite" title="com.testdemo.AppTest" class="method navigator-link" hash-for-method="addPositiveTest([8, 3, 4])">addPositiveTest([8, 3, 4])</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-testingSuite -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -108,7 +122,7 @@
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-testingSuite" title="com.testdemo.AppTest" class="method navigator-link" hash-for-method="addPositiveTest">addPositiveTest</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-testingSuite" title="com.testdemo.AppTest" class="method navigator-link" hash-for-method="addPositiveTest([11, 5, 6])">addPositiveTest([11, 5, 6])</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -128,28 +142,32 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-testingSuite" class="panel testingSuite">
-          <div class="suite-testingSuite-class-passed">
+          <div class="suite-testingSuite-class-failed">
             <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
+              <img src="failed.png"/>
               <span class="class-name">com.testdemo.AppTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="addNegativeTest">
-                  </a> <!-- addNegativeTest -->
-                  <span class="method-name">addNegativeTest</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="addPositiveTest">
-                  </a> <!-- addPositiveTest -->
+                  <a name="addPositiveTest([8, 3, 4])">
+                  </a> <!-- addPositiveTest([8, 3, 4]) -->
                   <span class="method-name">addPositiveTest</span>
+                  <span class="parameters">([8, 3, 4])</span>
+                  <div class="stack-trace">java.lang.AssertionError: expected:&lt;8&gt; but was:&lt;7&gt;
+	at org.junit.Assert.fail(Assert.java:88)
+	at org.junit.Assert.failNotEquals(Assert.java:743)
+	at org.junit.Assert.assertEquals(Assert.java:118)
+	at org.junit.Assert.assertEquals(Assert.java:555)
+	at org.junit.Assert.assertEquals(Assert.java:542)
+	at com.testdemo.AppTest.addPositiveTest(AppTest.java:28)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+... Removed 31 stack frames
+</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-testingSuite-class-passed -->
+          </div> <!-- suite-testingSuite-class-failed -->
           <div class="suite-testingSuite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -165,10 +183,33 @@
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
           </div> <!-- suite-testingSuite-class-passed -->
+          <div class="suite-testingSuite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.testdemo.AppTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="addNegativeTest">
+                  </a> <!-- addNegativeTest -->
+                  <span class="method-name">addNegativeTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="addPositiveTest([11, 5, 6])">
+                  </a> <!-- addPositiveTest([11, 5, 6]) -->
+                  <span class="method-name">addPositiveTest</span>
+                  <span class="parameters">([11, 5, 6])</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-testingSuite-class-passed -->
         </div> <!-- panel testingSuite -->
         <div panel-name="test-xml-testingSuite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">/home/atlas/coding/java/testNG/TestDemo/src/test/resources/testingSuite.xml</span>
+            <span class="header-content">/home/iqbal/playground/testNG/TestDemo/src/test/resources/testingSuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -244,19 +285,23 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(3);
+data.addRows(4);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'seleniumTest')
 data.setCell(0, 2, 'com.testdemo.WebDriverTest')
-data.setCell(0, 3, 1667);
+data.setCell(0, 3, 1052);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'addNegativeTest')
 data.setCell(1, 2, 'com.testdemo.AppTest')
-data.setCell(1, 3, 4);
+data.setCell(1, 3, 2);
 data.setCell(2, 0, 2)
 data.setCell(2, 1, 'addPositiveTest')
 data.setCell(2, 2, 'com.testdemo.AppTest')
 data.setCell(2, 3, 0);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'addPositiveTest')
+data.setCell(3, 2, 'com.testdemo.AppTest')
+data.setCell(3, 3, 0);
 window.suiteTableData['testingSuite']= { tableData: data, tableDiv: 'times-div-testingSuite'}
 return data;
 }
@@ -284,6 +329,8 @@ return data;
               <div class="ignored-methods-div">
                 <span class="ignored-method-name">subtractPositiveTest</span>
                 <br/>
+                <span class="ignored-method-name">multiplyPositiveTest</span>
+                <br/>
                 <span class="ignored-method-name">multiplyNegativeTest</span>
                 <br/>
                 <span class="ignored-method-name">subtractNegativeTest</span>
@@ -291,8 +338,6 @@ return data;
                 <span class="ignored-method-name">divideTest</span>
                 <br/>
                 <span class="ignored-method-name">divideByZeroTest</span>
-                <br/>
-                <span class="ignored-method-name">multiplyPositiveTest</span>
                 <br/>
               </div> <!-- ignored-methods-div -->
             </div> <!-- ignored-class-div -->
@@ -311,26 +356,32 @@ return data;
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">addNegativeTest</span>
-                <span class="method-start">39 ms</span>
+                <span class="method-start">12 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <span class="method-name">addPositiveTest</span>
-                <span class="method-start">49 ms</span>
+                <span class="method-name">addPositiveTest([11, 5, 6])</span>
+                <span class="method-start">17 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">addPositiveTest([8, 3, 4])</span>
+                <span class="method-start">18 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.testdemo.WebDriverTest</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">initAll</span>
-                <span class="method-start">52 ms</span>
+                <span class="method-start">22 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">seleniumTest</span>
-                <span class="method-start">2121 ms</span>
+                <span class="method-start">724 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">destroy</span>
-                <span class="method-start">3789 ms</span>
+                <span class="method-start">1777 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

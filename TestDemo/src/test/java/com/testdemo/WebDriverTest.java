@@ -3,9 +3,6 @@ package com.testdemo;
 import static org.junit.Assert.assertEquals;
 
 import java.time.Duration;
-import java.util.concurrent.TimeUnit;
-
-import javax.swing.text.html.Option;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;

@@ -5,13 +5,14 @@
     <groups>
       <run>
         <include name="addition"/>
+        <include name="selenium"/>
       </run>
     </groups>
     <classes>
       <class name="com.testdemo.AppTest">
         <methods>
-          <include name="addNegativeTest"/>
-          <include name="addPositiveTest"/>
+          <include name="initAll"/>
+          <include name="addPositiveTest" invocation-numbers="1"/>
         </methods>
       </class> <!-- com.testdemo.AppTest -->
     </classes>
